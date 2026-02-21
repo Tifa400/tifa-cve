@@ -25,3 +25,22 @@ Since modern Kali Linux environments use **PEP 668**, you must use a virtual env
 ```bash
 git clone [https://github.com/Tifa400/tifa-cve.git](https://github.com/Tifa400/tifa-cve.git)
 cd tifa-cve
+
+### ​🚀 Usage Guide
+​To get started with Tifa-CVE, follow these instructions:
+​1. Configuration
+​Before running the tool, you must set up your Shodan API Key.
+​Open the tifa-cve.py file in any text editor.
+​Locate the SHODAN_API_KEY variable in the configuration section.
+​Replace "YOUR_SHODAN_API_KEY" with your actual key.
+​A. Scan a Single Website
+​To perform a full reconnaissance and vulnerability scan on a single target, use the -u or --url flag:
+[python tifa-cve.py -u https://example.com)
+
+This command will:
+​Resolve the target's IP address.
+​Calculate the Favicon MurmurHash3 for stealth identification.
+​Fetch OS and port data from Shodan (Passive Recon).
+​Run Nuclei templates to verify active vulnerabilities (Critical/High).
+​Automatically save the results to your local SQLite database.
+
